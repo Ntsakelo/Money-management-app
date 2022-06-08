@@ -6,31 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Money Management App</title>
     <script src="https://kit.fontawesome.com/4f065757a2.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body> 
-    <div class="intro">
-        <h1 class="name allHead">SpendWise</h1>
-        <p>Welcome to SpendWise.This is an app that gives you a financial advice by computing the amount you should be spending on your monthly expenses to ensure that you have a balanced financial life with savings and investments. Interested? Click the button below to get started</p>
-       
- </div>
-<div class="userDetails">
- 
-    
-    <form class="userForm">
-        <label for="userName" class="inputLabel">First Name</label>
-        <input type="text" name="name" class="input firstName">
-        <label for="userName" class="inputLabel">Last Name</label>
-        <input type="text" name="name" class="input lastName">
-        <label for="userName" class="inputLabel">Monthly Salary</label>
-        <input type="text" name="name" class="input salary">
-        <label for="userName" class="inputLabel">Monthly Expenses</label>
-        <input type="text" name="name" class="input expenses">
-        <button type="button" class="getAdvice">Get Financial Advice</button>
-    </form>
-
-</div>
-   
+    <div class="container">
+        <nav>
+            <img src="./images/fin-logo.png" class="navbar--log"/>
+        </nav>
+        <div class="intro">
+            <h1 class="name allHead">BE SMART, SPEND WISELY</h1>
+            <h3>A ROADS TO FINANCIAL FREEDOM</h3>
+            <p>Welcome to SpendWise.This is an app that gives you a financial advice by computing the amount you should be spending on your monthly expenses to ensure that you have a balanced financial life with savings and investments. Interested? Click the button below to get started</p>
+        </div>
+        <section>
+            <h4>Please fill in your details below:</h4>
+            <form class="userForm">
+                <label for="userName" class="inputLabel">First Name
+                <input type="text" name="name" class="input firstName">
+            </label>
+                <label for="userName" class="inputLabel">Last Name
+                <input type="text" name="name" class="input lastName">
+            </label>
+                <label for="userName" class="inputLabel">Monthly Salary
+                <input type="text" name="name" class="input salary">
+            </label>
+                <label for="userName" class="inputLabel">Previous Monthly Expense
+                <input type="text" name="name" class="input expenses">
+            </label>
+                <button type="button" class="getAdvice">Get Financial Advice</button>
+            </form>
+        </section>
+        <footer>
+            proudly created by @soulbrothes
+        </footer>
+    </div>
    <script src="money_management.js" charset="utf-8"></script>
    <script src="money_management_dom.js" charset="utf-8"></script>
 </body>
