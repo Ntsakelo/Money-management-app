@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,39 +9,53 @@
     <script src="https://kit.fontawesome.com/4f065757a2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body> 
+
+<body>
     <div class="container">
         <nav>
-            <img src="./images/fin-logo.png" class="navbar--log"/>
+            <img src="./images/fin-logo.png" class="navbar--log" />
         </nav>
         <div class="intro">
             <h1 class="name allHead">BE SMART, SPEND WISELY</h1>
             <h3>A ROADS TO FINANCIAL FREEDOM</h3>
-            <p>Welcome to SpendWise.This is an app that gives you a financial advice by computing the amount you should be spending on your monthly expenses to ensure that you have a balanced financial life with savings and investments. Interested? Click the button below to get started</p>
+            <p>Welcome to SpendWise.This is an app that gives you a financial advice by computing the amount you should
+                be spending on your monthly expenses to ensure that you have a balanced financial life with savings and
+                investments. Interested? fill in your details below to get started</p>
         </div>
-        <section>
+        <div class="frm">
             <h4>Please fill in your details below:</h4>
             <form class="userForm">
                 <label for="userName" class="inputLabel">First Name
-                <input type="text" name="name" class="input firstName">
-            </label>
+                    <input type="text" placeholder="enter your first name" name="name" class="input firstName">
+                </label>
                 <label for="userName" class="inputLabel">Last Name
-                <input type="text" name="name" class="input lastName">
-            </label>
+                    <input type="text" placeholder="enter your last nmae" name="name" class="input lastName">
+                </label>
                 <label for="userName" class="inputLabel">Monthly Salary
-                <input type="text" name="name" class="input salary">
-            </label>
-                <label for="userName" class="inputLabel">Previous Monthly Expense
-                <input type="text" name="name" class="input expenses">
-            </label>
+                    <input type="text" placeholder="enter your monthly salary" name="name" class="input salary">
+                </label>
+                <label for="userName" class="inputLabel">Previous Month Expense
+                    <input type="text"  placeholder="enter previous month expenses" name="name" class="input expenses">
+                </label>
                 <button type="button" class="getAdvice">Get Financial Advice</button>
             </form>
-        </section>
+        </div>
+        <div class="aboutus">
+            <h2>ABOUT US</h2>
+            <p>
+                we provide people with financial advices. we help with managing your money and also help with finicial planning 
+                on  how much you spend in month. One of solution is spend 50% of your monthly net income on needs, which is
+                where your grocery limit would fall, along with other necessities like mortgage or rent, insurance and
+                car payments. Things you want  but don’t have to have comprise 30% of this budget and 20% goes to
+                savings, debts and investments.
+            </p>
+        </div>
         <footer>
             proudly created by @soulbrothes
         </footer>
     </div>
-   <script src="money_management.js" charset="utf-8"></script>
-   <script src="money_management_dom.js" charset="utf-8"></script>
+    <script src="money_management.js" charset="utf-8"></script>
+    <script src="money_management_dom.js" charset="utf-8"></script>
 </body>
-</html> 
+
+</html>
