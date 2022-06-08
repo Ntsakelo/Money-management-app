@@ -8,13 +8,11 @@
     <title>Money Management App</title>
     <script src="https://kit.fontawesome.com/4f065757a2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
 </head>
 
 <body>
     <div class="container">
-        
-           
-
         <nav>
         <img src="./images/fin-logo.png" class="navbar--log" />
         </nav>
@@ -40,56 +38,65 @@
                 <label for="userName" class="inputLabel">Previous Month Expense
                     <input type="text" placeholder="enter previous month expenses" name="name" class="input expenses">
                 </label>
-                <button type="button" href="./financialAdvice.html" class="button"> Get Financial Advice </button>
+                <button type="button" class="getAdvice"> Get Financial Advice </button>
             </form>
         </div>
         <div class="finadvice">
             <h2>FINACIAL ADVICING</h2>
             <script type="text/x-template" class="userTemplate">
                 <div>
-                    <h3> Hi, {{lastname}}</h3>
+                    <h3> Hi, {{lstName}}</h3>
                     <p> 
                         Purchasing financial products via financial advisors that earn commissions may be a matter of convenience,
                         especially if someone will receive a commission regardless of where you buy the product. 
-                        What’s important is understanding the difference. And if you work with a fee-based financial advisor, 
+                        What's important is understanding the difference. And if you work with a fee-based financial advisor, 
                         understand when they are acting as a fiduciary, especially when they help you purchase financial products.
                     </p>
                 </div>
                 <div>
                     <table>
-                        <caption>home expenses</caption>
+                        <caption>Home expenses</caption>
                         <tr>
                           <th>Expense Types</th>
                           <th>Amount</th>
                         </tr>
                         <tr>
                           <td>Grocery</td>
-                          <td>Electricity</td>
-                          <td>OtherExp</td>
-                          
+                          <td>R{{GroceryAmount}}</td>
                         </tr>
                         <tr>
-                          <td>R{{GroceryAmount}}</td>
+                          <td>Electricity</td>
                           <td>R{{ElecAmount}}</td>
+                        </tr>
+                        <tr>
+                          <td>OtherExp</td>
                           <td>R{{OtherExpAmount}}</td>
-                          <td>R{{debtsAmount}}</td>
                         </tr>
                     </table>
                     <table>
                         <caption>savings and investments</caption>
                         <tr>
-                          <th>Types</th>
+                          <th>Expense Types</th>
                           <th>Amount</th>
                         </tr>
                         <tr>
                           <td>Debts</td>
-                          <td>Saving & Investments</td>
+                          <td>R{{DebtsAmount}}</td>
                         </tr>
                         <tr>
-                          <td>R{{DebtsAmount}}</td>
+                          <td>Saving & Investments</td>
                           <td>R{{SavingAmount}}</td>
                         </tr>
                     </table>
+                </div>
+                <div>
+                    <p>
+                        we provide people with financial advices. Independent advisers, also called independent financial
+                        advisers (IFAs), research and consider all retail investment products or providers available to meet the
+                        client's needs. They must provide clients with unbiased and unrestricted advice.
+                        Restricted advisers only offer limited advice, focusing on a particular range of products or on products
+                        from one, or a limited number, of providers.
+                    </p>
                 </div>
             </script>
             <div class="userData">

@@ -5,38 +5,35 @@ const salary = document.querySelector(".salary");
 const expenses = document.querySelector(".expenses");
 const getAdviceBtn = document.querySelector(".getAdvice");
 
-//reference to the finAdvice page
-
-const electAmt = document.querySelector(".electAmt");
-
-const groceryAmt = document.querySelector(".groceryAmt");
-
-const otherAmt = document.querySelector(".otherAmt");
-
-const debtAmt = document.querySelector(".debtAmt");
-
-const saveAmt = document.querySelector(".saveAmt");
-
 //Button to see the graph
 const getGraph = document.querySelector(".getGraph");
 
 // instance of factory function
 const moneyApp = FinAdvice();
 
-//
 
-getAdviceBtn.addEventListener('click', function(){
-
-});
 getAdviceBtn.addEventListener("click", function () {
   moneyApp.setUserName(firstName.value);
   moneyApp.setlstName(lastName.value);
   moneyApp.setSalary(Number(salary.value));
   moneyApp.setExpense(Number(expenses.value));
 
-  electAmt.innerHTML = moneyApp.calcElectricity();
-  groceryAmt.innerHTML = moneyApp.calcGrocery();
-  otherAmt.innerHTML = moneyApp.calcOtherExp();
-  debtAmt.innerHTML = moneyApp.calcDebts();
-  saveAmt.innerHTML = moneyApp.calcSavings();
+    // get a reference to the template script tag
+    var templateSource = document.querySelector(".userTemplate").innerHTML;
+
+    // compile the template
+    var userTemplate = Handlebars.compile(templateSource);
+    // get a reference to tableBody where users is to be displayed
+    var userDataElem = document.querySelector(".userData");
+    var userData = {
+        lstName: moneyApp.getlstName(),
+        GroceryAmount: moneyApp.calcGrocery(),
+        ElecAmount: moneyApp.calcElectricity(),
+        OtherExpAmount:  moneyApp.calcOtherExp(),
+        DebtsAmount: moneyApp.calcDebts(),
+        SavingAmount: moneyApp.calcSavings()
+    };
+    // compile the template
+    var userDataHTML = userTemplate(userData);
+    userDataElem.innerHTML = userDataHTML;
 });
