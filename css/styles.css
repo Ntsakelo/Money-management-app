@@ -45,6 +45,10 @@ nav {
     background-color: lightblue;
 }
 
+table{
+    width: 100%;
+    border: 1px solid;
+}
 .aboutus {
     text-align: center;
 }

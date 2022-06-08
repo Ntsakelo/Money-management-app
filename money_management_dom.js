@@ -9,6 +9,7 @@ const getAdviceBtn = document.querySelector('.getAdvice');
 const moneyApp = "";
 
 //
+
 getAdviceBtn.addEventListener('click', function(){
-    
+
 });
