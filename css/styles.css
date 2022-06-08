@@ -15,12 +15,16 @@ nav {
 .navbar--log {
     width: 100px;
 }
-.intro h1 {
+.intro {
     text-align: center;
 }
 
 .inputLabel{
     display: block;
+}
+.frm {
+    display: block;
+    text-align: center;
 }
 .input{
     display: block;
@@ -30,6 +34,7 @@ nav {
     font-size: 20px;
     border: 1px solid rgb(3, 3, 70);
     outline: none;
+    margin-left: 30%;
 }
 .userForm button {
     width: 200px;
@@ -37,6 +42,10 @@ nav {
     font-weight: bold;
     color: rgb(3, 3, 70);;
     background-color: lightblue;
+}
+
+.aboutus {
+    text-align: center;
 }
 footer {
     text-align: center;
