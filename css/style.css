@@ -1,3 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+
 body{
-    background-color: aqua;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.intro{
+    width: 100%;
+    margin: auto;
+    /* margin-top: 200px; */
+    text-align: center;
+}
+.allHead{
+    text-align: center;
+}
+.start{
+    background-color: white;
+    border-radius: 50px;
+    background-color:darkslategray;
+    color: white;
+    border: 1px solid darkslategray;
+  
+}
+.start:hover{
+    cursor: pointer;
+}
+.forward{
+    position: relative;
+    left: 8px;
+    width: 30px;
+}
+.userDetails{
+  height: 450px;
+}
+.detailsHead{
+    text-align: center;
+}
+.userForm{
+    text-align:center;
+}
+.inputLabel{
+    display: block;
+    
+}
+.input{
+    margin-bottom: 20px;
+    height: 25px;
+    width: 150px;
+    font-size: 20px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    outline: none;
+    
+}
+.getAdvice{
+    display: block;
+    margin: auto;
+    border: 1px solid darkslategray;
+    border-radius: 20px;
+    background-color:darkslategray;
+    color: white;
+}
+.getAdvice:hover{
+   cursor: pointer;
+}
+.container{
+     /* border: 1px solid black; */
+    text-align: center;
+    height: 550px;
+  
+}
+.dispText{
+    border: 1px solid red;
+    height: 150px;
+    margin-bottom: 20px;
+}
+.expenseType{
+    display: inline-block;
+    width: 140px;
+    height: 30px;
+    border: 1px solid blue;
+    margin-bottom: 5px;
+}
+.expenseAmt{
+    display:inline-block;
+    width: 100px;
+    height: 30px;
+   border: 1px solid red;
+   margin-left: 10px;
+   margin-bottom: 5px;
+}
+.getGraph{
+    margin-top: 20px;
+    background-color:darkslategray;
+    color: white;
+    border: 1px solid darkslategray;
+    border-radius: 50px;
+}
+.getGraph:hover{
+    cursor: pointer;
+}
+@media screen and (min-width: 700px){
+    .intro{
+        width: 80%;
+    }
+    .container{
+        width: 35%;
+        margin: auto;
+    }
 }
