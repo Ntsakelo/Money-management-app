@@ -9,11 +9,11 @@
     <script src="https://kit.fontawesome.com/4f065757a2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
-        <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
 </head>
 
 <body>
-    <aside class="graphSection hide" >
+    <aside class="graphSection hide">
         <nav class="topBar">
             <img src="./images/fin-logo.png" class="navbar--log" />
         </nav>
@@ -23,18 +23,20 @@
         <div id="container2" class="cont2">
 
         </div>
-     <button class="backBtn">Back to Advice</button>
+        <button class="backBtn">Back to Advice</button>
     </aside>
     <div class="container">
         <nav>
-        <img src="./images/fin-logo.png" class="navbar--log" />
+            <img src="./images/fin-logo.png" class="navbar--log" />
         </nav>
         <div class="intro">
             <h1 class="name allHead">BE SMART, SPEND WISELY</h1>
             <h3>A ROAD TO FINANCIAL FREEDOM</h3>
-            <p>Welcome to SpendWise.This is an app that gives you a financial advice by computing the amount you should
+            <p>
+                Welcome to SpendWise.This is an app that gives you a financial advice by computing the amount you should
                 be spending on your monthly expenses to ensure that you have a balanced financial life with savings and
-                investments. Interested? fill in your details below to get started</p>
+                investments. Interested? fill in your details below to get started.
+            </p>
         </div>
         <div class="frm">
             <h4>Please fill in your details below:</h4>
@@ -48,7 +50,7 @@
                 <label for="userName" class="inputLabel">Monthly Salary
                     <input type="text" placeholder="enter your monthly salary" name="name" class="input salary">
                 </label>
-             
+
                 <button type="button" class="getAdvice"> Get Financial Advice </button>
             </form>
         </div>
@@ -58,11 +60,11 @@
                 <div>
                     <h3> Hi, {{lstName}}</h3>
                     <p>
-                        Below is the breakdown of the computed expenses and the amount you should be spending on each expense. Please review it and try to apply the suggested amount on each expense to better manage your money and be able to save or invest. The budget amount is the amount that you will have after all the expenses have been covered. The budget amount can be used to cover other arising costs that you may encounter during the course of the month.  
-                        <!-- Purchasing financial products via financial advisors that earn commissions may be a matter of convenience,
-                        especially if someone will receive a commission regardless of where you buy the product. 
-                        What's important is understanding the difference. And if you work with a fee-based financial advisor, 
-                        understand when they are acting as a fiduciary, especially when they help you purchase financial products. -->
+                        Below is the breakdown of the computed expenses and the amount you should be spending
+                        on each expense. Please review it and try to apply the suggested amount on each expense
+                        to better manage your money and be able to save or invest. The budget amount is the amount 
+                        that you will have after all the expenses have been covered. The budget amount can be used 
+                        to cover other arising costs that you may encounter during the course of the month.  
                     </p>
                     
                 </div>
@@ -106,16 +108,15 @@
                
                 <div>
                     <p>
-                        {{lstName}}, with monthly savings of {{SavingAmount}} from your calculated savings, we expect your money to grow at a constant rate of {{SavingAmount}}. In a period of 5 months demonstrated by the graph, your amount would have grown 5 times more than the savings amount. After savings, we recommend that you invest your money with a reliable financial service provider. With investments, your returns will be much higher compared to savings.
-                        <!-- we provide people with financial advices. Independent advisers, also called independent financial
-                        advisers (IFAs), research and consider all retail investment products or providers available to meet the
-                        client's needs. They must provide clients with unbiased and unrestricted advice.
-                        Restricted advisers only offer limited advice, focusing on a particular range of products or on products
-                        from one, or a limited number, of providers. -->
+                        {{lstName}}, with monthly savings of R{{SavingAmount}} from your calculated savings, we expect your
+                        money to grow at a constant rate of R{{SavingAmount}}. In a period of 5 months demonstrated by the graph, 
+                        your amount would have grown 5 times more than the savings amount. After savings, we recommend that you 
+                        invest your money with a reliable financial service provider. With investments, your returns will be much
+                        higher compared to savings.
                     </p>
                 </div>
             </script>
-            
+
             <div class="userData">
             </div>
             <button type="button" class="graph hide"> See Financial Graph </button>
@@ -123,7 +124,7 @@
         <div class="aboutus">
             <h2>ABOUT US</h2>
             <p>
-                we provide people with financial advices. Independent advisers, also called independent financial
+                We provide people with financial advices. Independent advisers, also called independent financial
                 advisers (IFAs), research and consider all retail investment products or providers available to meet the
                 client's needs. They must provide clients with unbiased and unrestricted advice.
                 Restricted advisers only offer limited advice, focusing on a particular range of products or on products
@@ -133,7 +134,7 @@
             </p>
         </div>
         <footer>
-            proudly created by @soulbrothes
+            proudly created by @soulbrothers
         </footer>
     </div>
     <script src="money_management.js" charset="utf-8"></script>
