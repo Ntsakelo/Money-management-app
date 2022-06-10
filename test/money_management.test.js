@@ -86,7 +86,7 @@ describe("The FinAdvice function", function () {
       let finAdvice = FinAdvice();
 
       finAdvice.setSalary(15000);
-      assert.equal(3000, finAdvice.calcSavings());
+      assert.equal(1500, finAdvice.calcSavings());
     });
     it("should be able to calculate the budget expense spending", function () {
       let finAdvice = FinAdvice();

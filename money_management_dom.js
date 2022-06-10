@@ -1,25 +1,27 @@
-// referencing the details form
+//Referencing for index.html
 const firstName = document.querySelector(".firstName");
 const lastName = document.querySelector(".lastName");
 const salary = document.querySelector(".salary");
+const adviceBtn = document.querySelector(".adviceBtn");
+const advicePage = document.querySelector(".advice");
+const container = document.querySelector(".container");
 
-const getAdviceBtn = document.querySelector(".getAdvice");
-const graphBtn = document.querySelector(".graph");
-const backBtn = document.querySelector(".backBtn");
 const graphSection = document.querySelector(".graphSection");
+const graphBtn = document.querySelector(".graphBtn");
+
+const backAdvBtn = document.querySelector(".backAdvBtn");
+const backHmeBtn = document.querySelector(".backHmeBtn");
+
 const expenseGraph = document.querySelector(".cont1");
 const saveGraph = document.querySelector(".cont2");
 
-//Button to see the graph
-const getGraph = document.querySelector(".getGraph");
-
-// instance of factory function
+//Factory function instance
 const moneyApp = FinAdvice();
 
-getAdviceBtn.addEventListener("click", function () {
+adviceBtn.addEventListener("click", function () {
   moneyApp.setUserName(firstName.value);
   moneyApp.setlstName(lastName.value);
-  moneyApp.setSalary(Number(salary.value));
+  moneyApp.setSalary(salary.value);
 
   // get a reference to the template script tag
   var templateSource = document.querySelector(".userTemplate").innerHTML;
@@ -29,6 +31,7 @@ getAdviceBtn.addEventListener("click", function () {
   // get a reference to tableBody where users is to be displayed
   var userDataElem = document.querySelector(".userData");
   var userData = {
+    firstName: moneyApp.getUserName(),
     lstName: moneyApp.getlstName(),
     GroceryAmount: moneyApp.calcGrocery(),
     ElecAmount: moneyApp.calcElectricity(),
@@ -39,11 +42,14 @@ getAdviceBtn.addEventListener("click", function () {
   // compile the template
   var userDataHTML = userTemplate(userData);
   userDataElem.innerHTML = userDataHTML;
-  graphBtn.classList.remove("hide");
-  graphBtn.classList.add("show");
+  advicePage.classList.remove("hide");
+  advicePage.classList.add("show");
+  container.classList.add("hide");
 });
 
 graphBtn.addEventListener("click", function () {
+  advicePage.classList.remove("show");
+  advicePage.classList.add("hide");
   //2.Add data to a sample
   anychart.onDocumentReady(function () {
     //1.Create data
@@ -54,7 +60,7 @@ graphBtn.addEventListener("click", function () {
         ["Electricity", moneyApp.calcElectricity()],
         ["debts", moneyApp.calcDebts()],
         ["Savings", moneyApp.calcSavings()],
-        ["Budget", moneyApp.calcBudget()],
+        // ["Budget", moneyApp.calcBudget()],
         ["Other Expenses", moneyApp.calcOtherExp()],
       ],
     };
@@ -95,12 +101,27 @@ graphBtn.addEventListener("click", function () {
     //draw the chart
     chart2.draw();
   });
+
   graphSection.classList.remove("hide");
   graphSection.classList.add("show");
 });
-backBtn.addEventListener("click", function () {
+
+backAdvBtn.addEventListener("click", function () {
   expenseGraph.innerHTML = "";
   saveGraph.innerHTML = "";
   graphSection.classList.remove("show");
   graphSection.classList.add("hide");
+
+  advicePage.classList.remove("hide");
+  advicePage.classList.add("show");
+});
+
+backHmeBtn.addEventListener("click", function () {
+  expenseGraph.innerHTML = "";
+  saveGraph.innerHTML = "";
+  graphSection.classList.remove("show");
+  graphSection.classList.add("hide");
+
+  container.classList.remove("hide");
+  container.classList.add("show");
 });

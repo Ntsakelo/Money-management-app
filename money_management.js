@@ -67,11 +67,11 @@ function FinAdvice() {
     return otherAmt.toFixed(2);
   }
   function calcDebts() {
-    debtAmt = salary * 0.1;
+    debtAmt = salary * 0.2;
     return debtAmt.toFixed(2);
   }
   function calcSavings() {
-    savingsAmt = salary * 0.2;
+    savingsAmt = salary * 0.1;
     return savingsAmt.toFixed(2);
   }
   function calcBudget() {
